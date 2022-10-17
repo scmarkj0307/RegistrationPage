@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>My Registration Form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+  
+</head>
+	
+	
+	
+	
+	<body>
+	
+		
+		
+		<div class="container">
+			<div class ="title">CREATE ACCOUNT</div>
+			<form action ="#">
+				<div class="user-details">
+				
+					<div class="input-box">
+						<span class="details">Full Name:</span>
+						<input type="text" class="name" placeholder="Enter your name" Required>
+					</div>
+		
+					<div class="input-box">
+						<span class="details">Username:</span>
+						<input type="text" class="uname" placeholder="Enter your username" Required>
+					</div>
+		
+					<div class="input-box">
+						<span class="details">Email:</span>
+						<input type="text" class="email" placeholder="Enter your email" Required>
+					</div>
+		
+					<div class="input-box">
+						<span class="details">Phone Number:</span>
+						<input type="text" class="number" placeholder="Enter your number" Required>
+					</div>
+		
+					<div class="input-box">
+						<span class="details">Password:</span>
+						<input type="password" id="ps" class="mypassword" placeholder="Enter your password" Required>
+						<i id="visibilityBtn"><span id="icon" class="material-icons">visibility</span></i>
+					</div>
+		
+					<div class="input-box">
+						<span class="details">Confirm Password:</span>
+						<input type="password" class="confirmpassword" placeholder="Confirm your password" Required>
+					</div>
+				</div>
+				
+				
+				
+				<div class="gender-details">
+				
+					<input type="radio" name="gender" class="gender1" id="dot-1">
+					<input type="radio" name="gender" class="gender2" id="dot-2">
+					
+				
+					<span class="gender-title">Gender</span>
+					<p>-optional-</p>
+					<div class="category">
+					
+						<label for="dot-1">
+							<span class="dot one "></span>
+							<span class="gender">Male</span>
+						</label>
+						
+						<label for="dot-2">
+							<span class="dot two "></span>
+							<span class="gender">Female</span>
+						</label>
+						
+						
+						
+					</div>
+				</div>
+				
+				<div class="button">
+					<input type="submit" class="button" value="SUBMIT">
+				</div>
+				
+			</form>
+			
+		</div>
+		
+		
+		<script>
+			
+		document.querySelector('.button').onclick = function(){
+			
+			var name =  document.querySelector('.name').value,
+				uname =  document.querySelector('.uname').value,
+				email =  document.querySelector('.email').value,
+				phone =  document.querySelector('.number').value,
+				password =  document.querySelector('.mypassword').value,
+				confirmPassword =  document.querySelector('.confirmpassword').value;
+				
+					if (password == confirmPassword && name != '' && uname != '' && email != '' && phone != '' && password != '' && confirmPassword != ''){
+					alert("Account Registered");
+					}
+					else if (password != confirmPassword && name != '' && uname != '' && email != '' && phone != '' && password != '' && confirmPassword != ''){
+					alert("Password Doesn't Match");
+					return false
+					}
+				
+		}
+		</script>
+		
+		<script src="index.js"></script>
+		
+	</body>
+
+
+
+</html>
